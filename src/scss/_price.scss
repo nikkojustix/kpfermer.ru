@@ -1,0 +1,63 @@
+.price {
+  &__months {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+  }
+
+  &__month {
+    background-color: var(--color-light-accent);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__month-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  &__descr-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__descr-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__descr-name {
+    white-space: nowrap;
+    &--sm {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  &__descr-value {
+    font-weight: 600;
+    color: var(--color-accent);
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .price__months {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .price__months {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,12 @@
+.location {
+  height: 770px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 24%, rgba(0, 0, 0, 0.4) 66%), url('@img/location.jpg');
+  background-size: cover;
+  background-position: top center;
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding-top: 2%;
+    color: var(--color-white);
+  }
+}
