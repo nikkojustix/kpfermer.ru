@@ -12,46 +12,47 @@ const topImgs = document.querySelector('.top__imgs');
 const topImgBg = topImgs.style.backgroundImage;
 topThumbsImgs.forEach((img) => {
   img.addEventListener('click', () => {
-    console.log(img.src);
     topImgs.style.backgroundImage = `url(${img.src})`;
   });
 });
 
 flsFunctions.tabs('tabs__btn', 'tabs__item', 'active');
 
-// new Splide('.rooms__images--lux', {
-//   perPage: 1,
-//   arrows: false,
-//   pagination: false,
-//   gap: 20,
-//   padding: { left: 0, right: '25%' },
-//   type: 'loop',
-// }).mount();
+new Splide('.gallery', {
+  arrows: true,
+  pagination: false,
+  type: 'loop',
+  padding: '27%',
+  gap: '80px',
+  speed: '700',
+  breakpoints: {
+    1199: {
+      padding: '20%',
+    },
+    767: {
+      padding: '80px',
+    },
+    550: {
+      padding: '20px',
+    },
+  },
+}).mount();
 
-// new Splide('.rooms__images--standart', {
-//   perPage: 1,
-//   arrows: false,
-//   pagination: false,
-//   gap: 20,
-//   padding: { left: 0, right: '25%' },
-//   type: 'loop',
-// }).mount();
-
-// new Splide('.testimonials', {
-//   perPage: 3,
-//   perMove: 1,
-//   pagination: false,
-//   gap: 20,
-//   type: 'loop',
-//   breakpoints: {
-//     999: {
-//       perPage: 2,
-//     },
-//     767: {
-//       perPage: 1,
-//     },
-//   },
-// }).mount();
+new Splide('.testimonials', {
+  perPage: 3,
+  perMove: 1,
+  pagination: false,
+  gap: 20,
+  type: 'loop',
+  breakpoints: {
+    999: {
+      perPage: 2,
+    },
+    767: {
+      perPage: 1,
+    },
+  },
+}).mount();
 
 flsFunctions.bindModal('.open-modal', '.modal--form', '.modal__close');
 flsFunctions.bindModal('.open-modal-plan', '.modal--plan', '.modal__close');

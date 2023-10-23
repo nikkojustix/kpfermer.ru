@@ -40,7 +40,7 @@
     overflow: hidden;
     flex-grow: 1;
     &::after {
-      content: '...........................................';
+      content: '.........................................................................................................';
       position: absolute;
     }
   }
@@ -49,7 +49,20 @@
     margin: 0;
     width: 25%;
   }
+}
 
-  &__btn {
+@media (max-width: 999px) {
+  .projects {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .projects {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

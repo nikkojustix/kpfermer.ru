@@ -6,6 +6,7 @@
   --color-grey-40: #495658;
 
   --color-black: #22221f;
+  --color-dark: #121c11;
 
   --color-primary: #006302;
   --color-primary-light: #1e8120;
@@ -112,6 +113,7 @@ img {
   background-color: var(--color-accent);
   line-height: 18px;
   font-weight: 500;
+  white-space: nowrap;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s;

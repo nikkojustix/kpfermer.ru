@@ -10,3 +10,21 @@
     color: var(--color-white);
   }
 }
+
+@media (max-width: 999px) {
+  .location {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    height: 350px;
+  }
+}
+
+@media (max-width: 499px) {
+  .location {
+    height: 200px;
+  }
+}
